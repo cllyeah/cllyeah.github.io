@@ -824,10 +824,61 @@ p.btn-left{
 
 /*Footer*/
 #footer{
-	font-size: .4em;
-	color: #fff;
-	text-align: center;
 	background-color: rgba(34,38,41,.7);
+	position: relative;
+	height: 50px;
+}
+
+#footer .arrow{
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	width: 20px;
+	height: 35px;
+	left: 50%;
+	margin-left: -10px;
+	background: url(../images/arrow.svg) bottom center no-repeat;
+	background-size: contain;
+	-webkit-animation: arrowAnimate 1.5s ease-in-out infinite;
+	animation: arrowAnimate 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes arrowAnimate {
+	0% {
+		bottom: 10px;
+		opacity: .8;
+	}
+	50% {
+		bottom: 20px;
+		opacity: 1;
+	}
+	80% {
+		bottom: 22px;
+		opacity: .4;
+	}
+	100% {
+		bottom: 22px;
+		opacity: 0;
+	}
+}
+
+@keyframes arrowAnimate {
+	0% {
+		bottom: 10px;
+		opacity: .8;
+	}
+	50% {
+		bottom: 20px;
+		opacity: 1;
+	}
+	80% {
+		bottom: 22px;
+		opacity: .4;
+	}
+	100% {
+		bottom: 22px;
+		opacity: 0;
+	}
 }
 
 @media(max-width:767px){
