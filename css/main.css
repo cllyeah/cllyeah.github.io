@@ -451,9 +451,10 @@ p.btn-left{
 	width: 90px;
 	height: 90px;
 	cursor: pointer;
-	-moz-transition: background .2s ease-in-out, -moz-transform .1s ease-in-out;
 	-webkit-transition: background .2s ease-in-out, -webkit-transform .1s ease-in-out;
-	-ms-transition: background .2s ease-in-out, -ms-transform .1s ease-in-out;
+	   -moz-transition: background .2s ease-in-out, -moz-transform .1s ease-in-out;
+	    -ms-transition: background .2s ease-in-out, -ms-transform .1s ease-in-out;
+	        transition: background .2s ease-in-out, -ms-transform .1s ease-in-out;
 	background: rgba(255,255,255,.5);
 	color: rgba(136,136,136,.5);
 	border-radius: 50%;
@@ -764,7 +765,7 @@ p.btn-left{
 	background-color: #999;
 	cursor: pointer;
 	-wekit-transition: background-color .3s linear;
-	transiton: background-color .3s linear;
+	transition: background-color .3s linear;
 	position: relative;
 }
 
@@ -830,6 +831,7 @@ p.btn-left{
 }
 
 #footer .arrow{
+	border-bottom: 0;
 	display: block;
 	position: absolute;
 	bottom: 20px;
@@ -930,15 +932,18 @@ p.btn-left{
 }
 
 /*change default button responsive style of bootstrap*/
-@media (min-width:768px) {
-    .navbar-toggle {
-        display: block;
-    }
-
 @media (min-width:992px) {
     .navbar-toggle {
         display: none;
     }
+}
+
+@media (max-width: 991px) {
+    .navbar-toggle {
+        display: block;
+    }
+}
+
 
 /*For ipad pro*/
 @media (min-width:961px) and (max-width:1320px){
@@ -994,5 +999,17 @@ p.btn-left{
 				margin-left: -1.25em;
 				line-height: 2.25em;
 			}
+}
 
+/*手机端浏览改变 top section 部分字体大小*/
+@media (max-width:600px){
+	#top header h2{
+		font-size: 1.2em;
+		padding: 0 23%;
+	}
+
+	#top header p{
+		font-size: 20px;
+		padding: 0 12%;
+	}
 }
